@@ -1,6 +1,0 @@
-POST http://localhost:8000/api/v1/runkategorikajiandelete
-Content-Type: application/json
-
-{ 
-  "kategori_kajian_id": "", 
-}

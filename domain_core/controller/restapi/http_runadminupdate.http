@@ -1,6 +1,0 @@
-POST http://localhost:8000/api/v1/runadminupdate
-Content-Type: application/json
-
-{ 
-  "admin_id": "", 
-}

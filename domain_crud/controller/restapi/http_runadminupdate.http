@@ -1,0 +1,6 @@
+###
+
+PUT http://localhost:8000/api/v1/admin/:admin_id
+Content-Type: application/json
+
+{}

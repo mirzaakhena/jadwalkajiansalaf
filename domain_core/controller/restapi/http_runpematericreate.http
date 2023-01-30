@@ -1,5 +1,0 @@
-POST http://localhost:8000/api/v1/runpematericreate
-Content-Type: application/json
-
-{ 
-}
