@@ -1,0 +1,6 @@
+POST http://localhost:8000/api/v1/runpenyelenggarakajianupdate
+Content-Type: application/json
+
+{ 
+  "penyelenggara_kajian_id": "", 
+}

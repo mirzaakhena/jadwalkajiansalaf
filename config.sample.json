@@ -1,0 +1,27 @@
+{
+    "jwt_secret_key": "ebbd4e1ccde02e5a251aafbdd7da3fc4e3f4a890601c014a13ebb76d099ef5e7e93a205128bc78cc21724a2723f04e0d7d27bf8fd08f0302b9280ded5fd20f72",
+    "database": {
+        "mongodb": {
+            "host": "localhost:27017",
+            "database": "yourdb",
+            "username": "",
+            "password": ""
+        }
+    },
+    "cache": {
+        "redis": {
+            "address": "localhost",
+            "port": 6379,
+            "db": 0,
+            "password": ""
+        }
+    },
+    "message_broker": {
+        "rabbitmq": {
+            "address": "localhost",
+            "port": 5672,
+            "username": "guest",
+            "password": "guest"
+        }
+    }
+}

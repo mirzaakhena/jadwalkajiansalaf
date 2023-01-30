@@ -1,0 +1,28 @@
+<template>
+  <MirzaModal id="modalDetail" ref="modalDetail" title="Raw Data" @submit="hideModal">
+    <pre>{{ JSON.stringify(state.item, null, 2) }}</pre>
+  </MirzaModal>
+</template>
+
+<script setup>
+import MirzaModal from "../../components/modal/MirzaModal.vue";
+import {state} from "./state.js";
+import {ref} from "vue";
+
+const modalDetail = ref()
+
+const showModal = () => {
+  modalDetail.value.showModal()
+}
+
+const hideModal = () => {
+  modalDetail.value.hideModal()
+}
+
+defineExpose({showModal, hideModal})
+
+</script>
+
+<style scoped>
+
+</style>

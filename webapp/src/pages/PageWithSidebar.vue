@@ -1,0 +1,20 @@
+<template>
+  <Sidebar title="App" :sections="sections"/>
+  <div style="margin-left: 300px; margin-right: 20px; margin-top: 20px">
+    <router-view/>
+  </div>
+</template>
+
+<script setup>
+
+import Sidebar from "../components/sidebar/Sidebar.vue";
+
+const sections = [
+  {
+    header: "Core Section", menus: [
+      {href: '/admin', title: 'Admin', icon: '#home',},
+    ]
+  },
+]
+
+</script>
