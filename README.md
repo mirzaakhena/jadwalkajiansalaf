@@ -7,3 +7,4 @@
 * User ingin kajian pada jam tertentu
 * User ingin kajian yang ada live streamingnya
 * User ingin kajian utk jenis jamaah tertentu
+* User dapat notifikasi
