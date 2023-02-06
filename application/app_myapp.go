@@ -47,7 +47,7 @@ func NewMyApp() gogen.Runner {
 
 func (myApp) Run() error {
 
-	const appName = "myApp"
+	const appName = "myapp"
 
 	cfg := config.ReadConfig()
 

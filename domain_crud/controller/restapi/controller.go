@@ -4,7 +4,6 @@ import (
 	"jadwalkajiansalaf/shared/config"
 	"jadwalkajiansalaf/shared/gogen"
 	"jadwalkajiansalaf/shared/infrastructure/logger"
-	"jadwalkajiansalaf/shared/infrastructure/server"
 	"jadwalkajiansalaf/shared/infrastructure/token"
 	"net/http"
 	"time"
@@ -25,6 +24,8 @@ type controller struct {
 func NewController(appData gogen.ApplicationData, log logger.Logger, cfg *config.Config, jwtToken token.JWTToken) gogen.ControllerRegisterer {
 
 	router := gin.Default()
+
+	//pprof.Register(router)
 
 	// PING API
 	router.GET("/ping", func(c *gin.Context) {
@@ -48,7 +49,7 @@ func NewController(appData gogen.ApplicationData, log logger.Logger, cfg *config
 
 	return &controller{
 		UsecaseRegisterer: gogen.NewBaseController(),
-		ControllerStarter: server.NewGracefullyShutdown(log, router, address),
+		ControllerStarter: NewGracefullyShutdown(log, router, address),
 		Router:            router,
 		log:               log,
 		cfg:               cfg,

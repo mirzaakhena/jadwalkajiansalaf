@@ -43,8 +43,8 @@ type Kajian struct {
 	ID            vo.KajianID    `bson:"_id" json:"id"`
 	Created       time.Time      `bson:"created" json:"created"`
 	Updated       time.Time      `bson:"updated" json:"updated"`
-	Judul         string         `json:"judul,omitempty" bson:"judul"`
-	Deskripsi     string         `json:"deskripsi" bson:"deskripsi"`
+	Judul         string         `json:"judul" bson:"judul"`
+	Deskripsi     string         `json:"deskripsi,omitempty" bson:"deskripsi"`
 	CatatanKhusus []string       `json:"catatan_khusus" bson:"catatan_khusus"`
 	Pemateri      string         `json:"pemateri" bson:"pemateri"`
 	Tanggal       time.Time      `json:"tanggal,omitempty" bson:"tanggal"`
