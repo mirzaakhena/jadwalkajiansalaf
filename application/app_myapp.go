@@ -2,7 +2,7 @@ package application
 
 import (
 	"jadwalkajiansalaf/domain_crud/controller/restapi"
-	"jadwalkajiansalaf/domain_crud/gateway/withgormdb"
+	"jadwalkajiansalaf/domain_crud/gateway/withgormdb2"
 	"jadwalkajiansalaf/domain_crud/usecase/getalladmin"
 	"jadwalkajiansalaf/domain_crud/usecase/getallalamat"
 	"jadwalkajiansalaf/domain_crud/usecase/getallkajian"
@@ -57,7 +57,7 @@ func (myApp) Run() error {
 
 	jwtToken := token.NewJWTToken(cfg.JWTSecretKey)
 
-	datasource := withgormdb.NewGateway(log, appData, cfg)
+	datasource := withgormdb2.NewGateway(log, appData, cfg)
 
 	primaryDriver := restapi.NewController(appData, log, cfg, jwtToken)
 

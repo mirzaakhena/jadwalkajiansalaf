@@ -1,6 +1,7 @@
 package entity
 
 import (
+	"jadwalkajiansalaf/domain_crud/model/errorenum"
 	"jadwalkajiansalaf/domain_crud/model/vo"
 	"time"
 )
@@ -19,14 +20,15 @@ type Admin struct {
 type AdminCreateRequest struct {
 	RandomString string    `json:"-"`
 	Now          time.Time `json:"-"`
-
-	// edit or add new necessary field for create request here ...
-
+	Nama         string    `json:"nama"`
 }
 
 func (r AdminCreateRequest) Validate() error {
 
 	// validate the create request here ...
+	if r.Nama == "" {
+		return errorenum.NamaAdminTidakBolehKosong
+	}
 
 	return nil
 }
@@ -47,6 +49,7 @@ func NewAdmin(req AdminCreateRequest) (*Admin, error) {
 	obj.ID = id
 	obj.Created = req.Now
 	obj.Updated = req.Now
+	obj.Nama = req.Nama
 
 	// another field input here ...
 

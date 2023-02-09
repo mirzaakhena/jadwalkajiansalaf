@@ -1,6 +1,6 @@
 {
  "domain": "crud",
- "controller": "gin",
- "gateway": "simple",
+ "controller": "echo",
+ "gateway": "gormdb",
  "crud": "gin"
 }

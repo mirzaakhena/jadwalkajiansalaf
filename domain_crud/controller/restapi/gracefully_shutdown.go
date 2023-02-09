@@ -21,7 +21,7 @@ type gracefullyShutdown struct {
 func NewGracefullyShutdown(log logger.Logger, handler http.Handler, address string) gogen.ControllerStarter {
 	return &gracefullyShutdown{
 		httpServer: &http.Server{
-			Addr:    address,
+			Addr:    ":8000",
 			Handler: handler,
 		},
 		log: log,
